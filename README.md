@@ -56,7 +56,7 @@ The preconfigured colors and the configured icons can be found in the project se
 > Specific Object Customizations are serialized in the settings scriptable object. So they are kept between sessions and between scenes.
 
 > [!CAUTION]
-> Removing the scriptable object containing the settings WILL reset them and all of your specific configurations.
+> Removing the scriptable object containing the settings WILL reset them and all of your specific customizations.
 
 | Change Color | Change Icon |
 | ------------- | ------------- |

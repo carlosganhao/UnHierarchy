@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -152,6 +153,11 @@ namespace UnHierarchy.Settings
                 settings._backgroundSprite = Resources.Load("background") as Texture2D;
                 settings._customFoldoutClosed = Resources.Load("plus") as Texture2D;
                 settings._customFoldoutOpen = Resources.Load("minus") as Texture2D;
+                if(!Directory.Exists(Path.GetDirectoryName(SettingsPath)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(SettingsPath));
+                    AssetDatabase.Refresh();
+                }
                 AssetDatabase.CreateAsset(settings, SettingsPath);
                 AssetDatabase.SaveAssets();
             }
