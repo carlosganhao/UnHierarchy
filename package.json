@@ -1,6 +1,6 @@
 {
     "name": "com.cooli2.unhierarchy",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "UnHierarchy",
     "description": "A package that allows you to customize the hierarchy however you want.",
     "unity": "6000.0",

@@ -85,6 +85,16 @@ namespace UnHierarchy.SettingsProvider
                     text = "Selection Color",
                     tooltip = "The color used when selecting objects in the hierarchy."
                 });
+                if(_selectionColor.colorValue != new Color(0.239f, 0.502f, 0.875f, 0.424f))
+                {
+                    if(GUILayout.Button(new GUIContent() {
+                        text = "Reset Selection Color",
+                        tooltip = "Resets the selection color to its default",
+                    }))
+                    {
+                        _selectionColor.colorValue = new Color(0.239f, 0.502f, 0.875f, 0.424f);
+                    }
+                }
                 EditorGUILayout.EndVertical();
                 // Alternating Background
                 EditorGUILayout.BeginVertical(GUI.skin.GetStyle("GroupBox"));
@@ -100,6 +110,16 @@ namespace UnHierarchy.SettingsProvider
                         text = "Alternating Background Color",
                         tooltip = "The color to use of alternating backgrounds."
                     });
+                    if(_alternatingBackgroundColor.colorValue != new Color(1, 1, 1, 0.05f))
+                    {
+                        if(GUILayout.Button(new GUIContent() {
+                            text = "Reset Alternating Background Color",
+                            tooltip = "Resets the alternating background to its default",
+                        }))
+                        {
+                            _alternatingBackgroundColor.colorValue = new Color(1, 1, 1, 0.05f);
+                        }
+                    }
                     EditorGUI.indentLevel--;
                 }
                 EditorGUILayout.EndFadeGroup();
@@ -183,6 +203,16 @@ namespace UnHierarchy.SettingsProvider
                 EditorGUILayout.BeginVertical(GUI.skin.GetStyle("GroupBox"));
                 EditorGUILayout.PropertyField(_customIcons);
                 EditorGUILayout.EndVertical();
+
+                // Clear Persistent Data
+                GUILayout.BeginHorizontal();
+                GUILayout.FlexibleSpace();
+                if(GUILayout.Button(new GUIContent() {text = "Clear Persistent Data", tooltip = "Clears all specific objects customizations."}))
+                {
+                    _serializedSettings.FindProperty("_customizationDatabase").boxedValue = new CustomizationDatabaseDictionary();
+                }
+                GUILayout.FlexibleSpace();
+                GUILayout.EndHorizontal();
 
                 _serializedSettings.ApplyModifiedPropertiesWithoutUndo();
                 HierarchyDrawer.Restart();

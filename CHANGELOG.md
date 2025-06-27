@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.1] - 2025-6-27
+### Added
+- Added Reset Selection Color Button
+- Added Reset Alternating Background Color Button
+- Added Clear Persistent Data Button
 ## [1.0.0] - 2025-6-25
 ### Added
 - Added Attribute Customizations

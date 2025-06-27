@@ -53,5 +53,10 @@ namespace UnHierarchy.Settings
             TryAdd(fileGuidAndLocalId, newCustomization);
             return newCustomization;
         }
+
+        public static explicit operator UnityEngine.Object(CustomizationDatabaseDictionary v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

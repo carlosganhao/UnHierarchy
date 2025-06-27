@@ -2,13 +2,17 @@
 
 The unity package to customize the hierarchy to your hearts content!
 
+![](./GitFiles/intro.gif)
+
 This package is meant to be a **free, public source**, unity package to customize the boring, default unity hierarchy. It is also meant to be a **resource to help others to make their own hierarchy customizations**, given that it takes some work to mess with Unity's current Hierarchy callbacks, and the lack of documentation and examples doesn't help.
 
 ## Table of Contents
-1. [Object Customization](#object-customization)
+1. [Installation](#installation)
+2. [How To Use](#how-to-use)
+3. [Object Customization](#object-customization)
    1. [Attribute Customization](#attribute-customization)
    2. [Specific Object Customization](#specific-object-customization)
-2. [Settings](#settings)
+4. [Settings](#settings)
    1. [Selection Color](#selection-color)
    2. [Alternating Background](#alternating-backgrounds)
    3. [Custom Background Sprite](#custom-background-sprite)
@@ -18,8 +22,20 @@ This package is meant to be a **free, public source**, unity package to customiz
    7. [Custom Foldouts](#custom-foldouts)
    8. [Custom Colors](#custom-colors)
    9. [Custom Icons](#custom-icons)
-3. [Inner Workings](#inner-workings)
-4. [Expanding & Contributing](#expanding--contributing)
+5. [Inner Workings](#inner-workings)
+6. [Expanding & Contributing](#expanding--contributing)
+
+## Installation
+To install this package all you need to do is head to Unity's package manager (Window > Package Manager), add a package through git, and paste this repo's clone URL:
+![](./GitFiles/PackageManager1.png)
+![](./GitFiles/PackageManager2.png)
+
+## How To Use
+When you first install this package, you won't notice much of a difference. To check if the installation was a success you can press `Alt + LMB` on any object in the hierarchy and verify that a popup appears. If so the installation was a success!
+
+One thing that you can do immediately after installing this package is customize specific game objects in the hierarchy with custom background colors. This can be done with the popup when you click `Alt + LMB` on an hierarchy line, or by using two attributed included with this package. For more information about object customization refer to the [Object Customization](#object-customization) section.
+
+This package also have a couple of settings to change the behaviour of your Unity hierarchy. You can find these under your project settings in a new section called "UnHierarchy". Its adviseable to start by changing a couple of settings and seeing the differences they cause on your Unity hierarchy, so you can feel what works best. All settings have tooltips, but for a full documentation refer to the [Settings](#settings) section.
 
 ## Object Customization
 This package includes a couple ways to customize specific object's background and icons in the hierarchy.
